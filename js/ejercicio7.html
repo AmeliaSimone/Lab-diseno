@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 7</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+<script>
+function colorFondo(color){
+document.bgColor=color;
+
+if( document.bgColor == document.fgColor){
+    alert('No se puede usar esta combinación')
+    window.location="ejercicio7.html";
+} else if( document.bgColor != document.fgColor);
+}
+function colorTexto(color){
+document.fgColor=color;
+
+if(document.fgColor == document.bgColor){
+    alert('No se puede usar esta combinación')
+    window.location="ejercicio7.html";
+} else if(document.fgColor != document.bgColor){
+    alert('Buena combinación');
+}
+}
+</script>
+</head>
+
+
+<body>
+<div class="container text-center mt-5">
+    <div class="grupo">
+        <h1>Elegir primero color de fondo</h1>
+        <input type="radio" name="fon" onclick="colorFondo('#fff');" />
+        Blanco <br>
+        <input type="radio" name="fon" onclick="colorFondo('#000');" />
+        Negro <br>
+        <input type="radio" name="fon" onclick="colorFondo('#f00');" />
+        Rojo <br>
+        <input type="radio" name="fon" onclick="colorFondo('#0f0');" />
+        Verde <br>
+        <input type="radio" name="fon" onclick="colorFondo('#00f');" />
+        Azul </div>
+        
+        <div class="grupo">
+        <h1>Elegir color de texto</h1>
+        <input type="radio" name="texto" onclick="colorTexto('#fff');" />
+        Blanco <br>
+        <input type="radio" name="texto" onclick="colorTexto('#000');" />
+        Negro <br>
+        <input type="radio" name="texto" onclick="colorTexto('#f00');" />
+        Rojo <br>
+        <input type="radio" name="texto" onclick="colorTexto('#0f0');" />
+        Verde <br>
+        <input type="radio" name="texto" onclick="colorTexto('#00f');" />
+        Azul </div>
+        
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

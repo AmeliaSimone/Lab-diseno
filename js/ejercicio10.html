@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script>
+        function oracion(){
+           
+            var sujeto = document.getElementById("sujeto").value;
+            var idea = document.getElementById('idea').value;
+            var adj = document.getElementById("adj").value;
+            var adj2 = document.getElementById("adj2").value;
+            var sust = document.getElementById("sust").value;
+            var sust2 = document.getElementById("sust2").value;
+            var verbo = document.getElementById("verbo").value;
+            var verbo2 = document.getElementById("verbo2").value;
+
+
+
+            var sujetos = document.getElementsByClassName("sujeto");
+            for(i=0;i<sujetos.length;i++){
+                sujetos[i].innerHTML=sujeto;
+
+            }
+           document.write(sujeto +" "+ verbo +" " + adj + ", volvía a su " + sust + ", y el " +sust2+ " era el único que lo/a esperaba. " + sujeto +" "+ verbo2 +" " +adj2 + " , " + sujeto +" "+ verbo2 +" "+ adj + ", muy " +adj + ". Y " + sujeto + " tuvo una brillante idea: " + idea)
+        };
+    </script>
+</head>
+<body>
+
+  <div class="container text-center">
+    <h1>¡Armemos una oración!</h1> <br>
+
+    <p>Escribe un nombre:<input type="text" name="sujeto" id="sujeto" placeholder="Escribe un nombre"> <br>
+    </p>
+
+    <label for="adj" >Selecciona un adjetivo</label>
+    <select name="adj" id="adj" required>
+      <option selected="true" disabled="disabled">Selecciona uno</option>
+      <option value="solo/a">solo/a</option>
+      <option value="desanimado/a">desanimado/a</option> 
+    </select> <br> 
+
+
+      <label for="adj2" >Selecciona otro adjetivo</label>
+    <select name="adj2" id="adj2" required>
+      <option selected="true" disabled="disabled">Selecciona uno</option>
+      <option value="angustiado/a">angustiado/a</option>
+      <option value="triste">triste</option> 
+    </select> <br> 
+
+      <label for="sust" >Selecciona un sustantivo</label>
+    <select name="sust" id="sust" required>
+      <option selected="true" disabled="disabled">Selecciona uno</option>
+      <option value="departamento">departamento</option>
+      <option value="casa">casa</option> 
+    </select> <br> 
+
+      <label for="sust2" >Selecciona otro sustantivo</label>
+      <select name="sust2" id="sust2" required>
+        <option selected="true" disabled="disabled">Selecciona uno</option>
+        <option value="silencio">silencio</option>
+        <option value="perro">perro</option> 
+        <option value="gato">gato</option> 
+    </select> <br> 
+
+    <label for="verbo" >Selecciona un verbo</label>
+    <select name="verbo" id="verbo" required>
+      <option selected="true" disabled="disabled">Selecciona uno</option>
+      <option value="se sentia">se sentia</option>
+      <option value="se encontraba">se encontraba</option> 
+    </select> <br> 
+
+    <label for="verbo2" >Selecciona otro verbo</label>
+    <select name="verbo2" id="verbo2" required>
+      <option selected="true" disabled="disabled">Selecciona uno</option>
+      <option value="se sentia">se sentia</option>
+      <option value="se encontraba">se encontraba</option> 
+      <option value="estaba">estaba</option>
+    </select> <br> 
+
+    <p>Escribe algo que te gusta hacer: <input type="text" name="idea" id="idea" placeholder="escribe una idea"> <br>
+    </p>
+    <button onclick="oracion()">Enviar</button>
+  </div>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
